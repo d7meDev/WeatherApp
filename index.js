@@ -2,6 +2,12 @@ const weatherForm = document.querySelector(".weatherForm");
 const cityInput = document.querySelector(".cityInput");
 const card = document.querySelector(".card");
 const apiKey = "1c978bdd7c0ab9886bf3fe459c634f98";
+cityInput.addEventListener('focus',event =>{
+  event.target.style.outline = "3px solid hsl(0, 0%, 30%)";
+})
+cityInput.addEventListener('blur',event =>{
+  event.target.style.outline = "none";
+})
 
 weatherForm.addEventListener('submit', async event => {
     event.preventDefault();
